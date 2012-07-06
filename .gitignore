@@ -1,0 +1,12 @@
+g*.o
+*.os
+*.dylib
+*.so
+*.dll
+.DS_Store
+*.nk~
+*.nk.autosave
+*_pkg
+*_pkg.zip
+*.nk~
+Graphs.gcx
