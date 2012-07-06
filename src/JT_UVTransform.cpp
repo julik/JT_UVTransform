@@ -203,7 +203,7 @@ public:
 		uvw.w = w;
 	}
 	
-	// Apply distortion to each element in the passed vertex or point attribute
+	// Apply xforms to each element in the passed vertex or point attribute
 	void transform_each_element_in_attribute(Attribute* attr, unsigned const int num_of_elements)
 	{
 		if(!attr) return;
@@ -228,7 +228,7 @@ public:
 			uv = out.writable_attribute(i, Group_Points, uv_attrib_name, VECTOR4_ATTRIB);
 			transform_each_element_in_attribute(uv, info.points());
 			
-			// If the previously detected group type is vertex attribute we need to distort it as well
+			// If the previously detected group type is vertex attribute we need to modify it as well
 			// since vertex attribs take precedence and say a Sphere in Nuke has vertex attribs
 			// as opposed to point attribs :-( so justified double work here
 			if(t_group_type == Group_Vertices) {
