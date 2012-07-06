@@ -1,0 +1,112 @@
+#! /Applications/Nuke6.3v4/NukeX6.3v4.app/../Nuke6.3v4.app/Contents/MacOS/Nuke6.3v4 -nx
+version 6.3 v4
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="44" w="1920" h="1174" screen="0">
+        <splitter orientation="1">
+            <split size="1398"/>
+            <splitter orientation="1">
+                <split size="46"/>
+                <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                    <page id="Toolbar.1"/>
+                </dock>
+                <split size="1348"/>
+                <splitter orientation="2">
+                    <split size="740"/>
+                    <splitter orientation="1">
+                        <split size="1348"/>
+                        <dock id="" activePageId="Viewer.1">
+                            <page id="Viewer.1"/>
+                        </dock>
+                    </splitter>
+                    <split size="408"/>
+                    <dock id="" activePageId="DAG.1">
+                        <page id="DAG.1"/>
+                        <page id="Curve Editor.1"/>
+                        <page id="DopeSheet.1"/>
+                    </dock>
+                </splitter>
+            </splitter>
+            <split size="518"/>
+            <splitter orientation="2">
+                <split size="998"/>
+                <dock id="" activePageId="Properties.1">
+                    <page id="Properties.1"/>
+                    <page id="Script Editor.1"/>
+                </dock>
+                <split size="150"/>
+                <dock id="" activePageId="Progress.1">
+                    <page id="Progress.1"/>
+                </dock>
+            </splitter>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name /Users/julik/Code/JT_UVTransform/JT_UVTransform_Example_v01.nk
+ frame 26
+ format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
+ proxy_type scale
+ proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
+ addUserKnob {20 User}
+ addUserKnob {1 cachedversion +INVISIBLE}
+ cachedversion v01
+}
+Camera2 {
+ inputs 0
+ rotate {5.200111866 -62.40037155 0}
+ focal 11.6
+ name Camera1
+ xpos 414
+ ypos -63
+}
+set N7025340 [stack 0]
+push $N7025340
+Read {
+ inputs 0
+ file "\[file dirname \[value root.name]]/Pharmacy_light.jpg"
+ format "2048 1466 0 0 2048 1466 1 "
+ origset true
+ name Read2
+ xpos 100
+ ypos -148
+}
+Sphere {
+ rows 180
+ columns 180
+ name Sphere1
+ xpos 100
+ ypos -66
+}
+JT_UVTransform {
+ selectable false
+ flip true
+ translate {0 0 0}
+ scaling {2 1 1}
+ name JT_UVTransform1
+ selected true
+ xpos 100
+ ypos -42
+}
+Scene {
+ inputs 2
+ name Scene1
+ xpos 236
+ ypos -63
+}
+push 0
+ScanlineRender {
+ inputs 3
+ output_motion_vectors_type accurate
+ name ScanlineRender1
+ xpos 226
+ ypos 46
+}
+Viewer {
+ input_process false
+ name Viewer2
+ xpos 672
+ ypos -103
+}
