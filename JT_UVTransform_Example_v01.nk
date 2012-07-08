@@ -1,25 +1,25 @@
-#! /Applications/Nuke6.3v4/NukeX6.3v4.app/../Nuke6.3v4.app/Contents/MacOS/Nuke6.3v4 -nx
+#! /Applications/Nuke6.3v4/Nuke6.3v4.app/Contents/MacOS/Nuke6.3v4 -nx
 version 6.3 v4
 define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 <layout version="1.0">
-    <window x="0" y="44" w="1920" h="1174" screen="0">
+    <window x="0" y="44" w="1680" h="1024" screen="0">
         <splitter orientation="1">
-            <split size="1398"/>
+            <split size="1223"/>
             <splitter orientation="1">
-                <split size="46"/>
+                <split size="40"/>
                 <dock id="" hideTitles="1" activePageId="Toolbar.1">
                     <page id="Toolbar.1"/>
                 </dock>
-                <split size="1348"/>
+                <split size="1179"/>
                 <splitter orientation="2">
-                    <split size="740"/>
+                    <split size="643"/>
                     <splitter orientation="1">
-                        <split size="1348"/>
+                        <split size="1179"/>
                         <dock id="" activePageId="Viewer.1">
                             <page id="Viewer.1"/>
                         </dock>
                     </splitter>
-                    <split size="408"/>
+                    <split size="355"/>
                     <dock id="" activePageId="DAG.1">
                         <page id="DAG.1"/>
                         <page id="Curve Editor.1"/>
@@ -27,14 +27,14 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
                     </dock>
                 </splitter>
             </splitter>
-            <split size="518"/>
+            <split size="453"/>
             <splitter orientation="2">
-                <split size="998"/>
+                <split size="868"/>
                 <dock id="" activePageId="Properties.1">
                     <page id="Properties.1"/>
                     <page id="Script Editor.1"/>
                 </dock>
-                <split size="150"/>
+                <split size="130"/>
                 <dock id="" activePageId="Progress.1">
                     <page id="Progress.1"/>
                 </dock>
@@ -62,8 +62,8 @@ Camera2 {
  xpos 414
  ypos -63
 }
-set N7025340 [stack 0]
-push $N7025340
+set Nf09ba10 [stack 0]
+push $Nf09ba10
 Read {
  inputs 0
  file "\[file dirname \[value root.name]]/Pharmacy_light.jpg"
@@ -83,7 +83,7 @@ Sphere {
 JT_UVTransform {
  selectable false
  flip true
- translate {0 0 0}
+ rotate {0 60 0}
  scaling {2 1 1}
  name JT_UVTransform1
  selected true

@@ -176,7 +176,7 @@ public:
 		uvw.x = uvw.x / uvw.w;
 		uvw.y = uvw.y / uvw.w;
 		uvw.z = 0;
-		uvw.w = 0;
+		uvw.w = 1;
 
 		
 		// Apply rotation, scale, skew
